@@ -17,6 +17,7 @@ Provides actionable recommendations for risk mitigation.
 Advanced models can answer user-specific questions about the document, enabling quick information retrieval.
 
 **Key Components**
+
 **Natural Language Processing (NLP):**
 
 NLP models, such as GPT or BERT, are used to process legal language.
@@ -43,9 +44,7 @@ Quantifies risks by assigning a "risk score" based on the analysis of clauses, c
 
 **1.Clone the Repository**
 
-git clone  <repository-url>
-
-cd <repository-directory>
+git clone https://github.com/Pranithaadari/Legal-AI-App
 
 **2.Install Dependencies**
 
@@ -60,30 +59,40 @@ pip install -r requirements.txt
 2.**Gmail Alert**:Notifies users of new emails, updates, or security events directly via pop-ups, notifications, or linked devices.
 
 **Steps:**
+
 1.**Google Sheet APIs**:
+
 -Sign in to the Google cloud console.
+
 -Obtain those API keys and google sheet id
+
 -Then apply them to project.ipynb
+
 **2.Gmail Alert:**
+
 -sign in to the google app passwords
+
 -it will generate one-time code
+
 -then apply them in the project.ipynb
 
 **4.Develop an app**
+
 -Develop an app using the streamlit framework
 
 **5.Run the Application:**
 
 Run the Streamlit app
+
  streamlit run app.py
 
 **Project Files:**
 
 app.py:Main Application script
+
 CSV file:Sample data for risk analysis and recommendations
+
 project.ipynb:List of dependencies and the document analysis and their recommendations
-
-
 
 **Outcomes:**
 
