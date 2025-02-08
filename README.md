@@ -1,116 +1,92 @@
-**Advanced AI-Driven Legal Document Summarization and Risk Assessment**
+**Legal Document Risk Analysis Dashboard**
+A Streamlit-powered web application for analyzing legal documents, identifying potential risks, and providing actionable recommendations. The application also integrates with Google Sheets for saving results and offers email notifications.
 
-**Legal Document Summarization:**
+**Features**
+**File Upload:** Upload legal documents in .txt, .docx, or .pdf formats for analysis.
+**Risk Analysis:**Analyze documents for potential risks and recommendations using LLaMA 3.2 model.
+**Interactive Dashboard:**
+Displays analysis results in a table.
+Allows downloading results as a CSV file.
+**Google Sheets Integration:** Save the analysis results directly to a Google Sheet.
+**Email Notifications:**Send a summary of the analysis to stakeholders via email.
+**Chat Functionality:** Query the document for additional insights.
+**User-Friendly Interface:** Organized layout with intuitive navigation and modern design.
+**Technology Stack**
+**Backend**
+**Python:** Core programming language.
+**LangChain:** Framework for handling LLMs and document-based analysis.
+**LLaMA 3.2:** Advanced large language model for risk and recommendation generation.
+**Chroma:** Vector database for document chunking and retrieval.
+**HuggingFace:** Embedding models for semantic similarity.
+**Frontend**
+**Streamlit:** Framework for building the user interface with custom layouts and interactions.
+**Additional Tools**
+**Google Sheets API:** For exporting results to spreadsheets.
+**SMTP:** For sending emails with report links.
+**Custom CSS:** For styling the dashboard.
+**How It Works**
+1.Upload a Document:
 
-I systems summarize lengthy legal documents into concise, easy-to-understand summaries.
+   Users can upload .txt, .docx, or .pdf files.
+2.Document Analysis:
 
-They highlight key clauses, obligations, deadlines, and critical points.
+  The document is split into chunks for analysis.
+  The LLaMA 3.2 model evaluates each chunk to identify risks and recommendations.
+3.View Results:
 
-**Risk Assessment:**
+    Results are displayed in a structured table with columns for context, risks, and 
+    recommendations.
+4.Save and Share:
 
-AI analyzes legal documents to detect potential risks, such as ambiguous clauses, penalties, regulatory compliance issues, or high-liability terms.
+  Save results to a Google Sheet.
+  Email a summary report to stakeholders.
+5.Query the Document:
 
-Provides actionable recommendations for risk mitigation.
+  Use the chat interface to ask questions about the document.
+**Prerequisites**
+Python 3.8 or above
+Required Python libraries (install using pip install -r requirements.txt):
+   streamlit
+   pandas
+   google-api-python-client
+   google-auth
+   langchain
+   smtplib
+**Setup Instructions**
+1.Clone the Repository
 
-**Question-Answering (Q&A):**
-
-Advanced models can answer user-specific questions about the document, enabling quick information retrieval.
-
-**Key Components**
-
-**Natural Language Processing (NLP):**
-
-NLP models, such as GPT or BERT, are used to process legal language.
-
-They can interpret complex legal jargon, identify critical clauses, and generate summaries.
-
-**Machine Learning Models:**
-
-Models trained on large datasets of legal documents identify patterns, risks, and important terms.
-
-These models are often fine-tuned for specific industries, such as finance, real estate, or healthcare.
-
-**Document Parsing and Extraction:**
-
-Tools extract structured data from various formats (PDFs, DOCX, scanned files).
-
-Optical Character Recognition (OCR) technology is used for scanned documents.
-
-**Risk Scoring:**
-
-Quantifies risks by assigning a "risk score" based on the analysis of clauses, compliance requirements, and liability.
-
-**Steps:**
-
-**1.Clone the Repository**
-
-git clone https://github.com/Pranithaadari/Legal-AI-App
-
-**2.Install Dependencies**
-
-Install the required Python libraries using pip:
+git clone https://github.com/yourusername/legal-risk-dashboard.git
+cd legal-risk-dashboard
+2.Install Dependencies
+Install all the required Python libraries using the following command:
 
 pip install -r requirements.txt
+3.Add Google Service Account Key
 
-**3.Configure API Keys**
+Obtain the service account key from the Google Cloud Console.
+Download the JSON key file and place it in the project directory.
+Update the SERVICE_ACCOUNT_FILE variable in the code with the path to this file.
+4.Configure Google Sheets
 
-1.**Google sheet APIs**:Allows developers to programmatically read, write, and manage Google Sheets data, enabling seamless integration with applications and automated workflows.
+Create a Google Sheet and copy its Sheet ID.
+Replace the SPREADSHEET_ID variable in the code with your Google Sheet's ID.
+5.Run the Streamlit App
+Start the application by running the following command:
 
-2.**Gmail Alert**:Notifies users of new emails, updates, or security events directly via pop-ups, notifications, or linked devices.
+streamlit run app.py
+6.Access the Application
+Open the provided localhost or network URL in your browser to access the dashboard.
 
-**Steps:**
+**Future Enhancements**
+Add support for additional file formats.
+Enhance the chat functionality with contextual responses.
+Improve the dashboard's UI/UX with advanced visualization tools.
+Integrate with other storage and sharing platforms (e.g., OneDrive, Dropbox).
 
-1.**Google Sheet APIs**:
-
--Sign in to the Google cloud console.
-
--Obtain those API keys and google sheet id
-
--Then apply them to project.ipynb
-
-**2.Gmail Alert:**
-
--sign in to the google app passwords
-
--it will generate one-time code
-
--then apply them in the project.ipynb
-
-**4.Develop an app**
-
--Develop an app using the streamlit framework
-
-**5.Run the Application:**
-
-Run the Streamlit app
-
- streamlit run app.py
-
-**Project Files:**
-
-app.py:Main Application script
-
-CSV file:Sample data for risk analysis and recommendations
-
-project.ipynb:List of dependencies and the document analysis and their recommendations
-
-**Outcomes:**
-
-1.Document Parsing and Contextual Summarization Engine
-
-Extracts key information from legal documents and generates concise summaries.
-
-2.Risk Detection and Recommendation System
-
-Identifies potential risks by cross-referencing clauses for hidden obligations or dependencies.D :
-
-3.Continuous Regulatory Update Tracker
-
-Monitors regulatory changes and integrates updates into ongoing contract analysis.
-
-4.Platform Integration and Interactive Dashboard
-
-Integrates with email accounts, Google Sheets, and provides an interactive dashboard for document tracking and alerts.
+**Acknowledgments**
+OpenAI for providing the foundational models.
+Streamlit for enabling quick and interactive web app development.
+Google Cloud Platform for API services.
 
 
 
