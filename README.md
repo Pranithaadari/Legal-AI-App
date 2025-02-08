@@ -95,12 +95,15 @@ Required Python libraries (install using pip install -r requirements.txt):
 **Setup Instructions**
 
 **1.Clone the Repository**
+
 git clone https://github.com/yourusername/legal-risk-dashboard.git
+
 cd legal-risk-dashboard
 
 **2.Install Dependencies**
 
 Install all the required Python libraries using the following command:
+
 pip install -r requirements.txt
 
 **3.Add Google Service Account Key**
